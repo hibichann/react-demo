@@ -1,18 +1,16 @@
-// import { useState } from "react"
-// import reactLogo from "./assets/react.svg"
-// import viteLogo from "/vite.svg"
-// import Comp from "./Component/Comp1"
-// import Comp2 from "./Component/Comp2"
-import { Outlet, Link } from "react-router-dom"
+import { useRoutes } from "react-router-dom"
+import router from "./router"
+import React from "react"
 function App() {
-	// const [count, setCount] = useState(0)
+	const outlet = useRoutes(router)
 	return (
 		<div className='App'>
-			<Link to='/home'>home</Link>
-			<Link to='/about'>about</Link>
-			<br></br>
+			{/* 
+			<Link to='/home'>Home</Link>
+			<Link to='/about'>About</Link> 
+			*/}
 			{/* 路由页面占位符，类似于vue中的router-view */}
-			<Outlet></Outlet>
+			<React.Suspense fallback={<div>Loading</div>}>{outlet}</React.Suspense>
 		</div>
 	)
 }
