@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react"
 import { Navigate } from "react-router-dom"
 import Home from "@/views/home"
+import Login from "@/views/Login"
 const About = lazy(() => import("@/views/about"))
 // const Home = lazy(() => import("@/views/home"))
 const Page1 = lazy(() => import("@/views/page1"))
@@ -14,6 +15,10 @@ const routes = [
 	{
 		path: "/",
 		element: <Navigate to='/page1' />,
+	},
+	{
+		path: "/login",
+		element: <Login></Login>,
 	},
 	{
 		path: "/",
