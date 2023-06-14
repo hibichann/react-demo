@@ -58,6 +58,11 @@ const items: MenuProps["items"] = [
 				key: "/page32",
 				icon: <DesktopOutlined />,
 			},
+			{
+				label: "about",
+				key: "/about",
+				icon: <DesktopOutlined />,
+			},
 		],
 	},
 ]

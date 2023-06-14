@@ -36,6 +36,10 @@ const routes = [
 				path: "/page31",
 				element: loading(<Page31 />),
 			},
+			{
+				path: "/about",
+				element: loading(<About />),
+			},
 		],
 	},
 	{
