@@ -11,14 +11,24 @@ function About() {
 	}
 	return (
 		<div className='a'>
-			<input type='text' value={str} onChange={(e) => setStr(e.target.value)} />
-			<button
-				onClick={() => {
-					setList([...list, { val: str, status: false }])
-					setStr("")
+			<form
+				onSubmit={(e) => {
+					e.preventDefault()
 				}}>
-				Submit
-			</button>
+				<input
+					type='text'
+					value={str}
+					onChange={(e) => setStr(e.target.value)}
+				/>
+				<button
+					type='submit'
+					onClick={() => {
+						setList([...list, { val: str, status: false }])
+						setStr("")
+					}}>
+					Submit
+				</button>
+			</form>
 			<br></br>
 			<br></br>
 			<ul>
