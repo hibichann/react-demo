@@ -43,10 +43,6 @@ const routes = [
 		],
 	},
 	{
-		path: "/about",
-		element: <About />,
-	},
-	{
 		path: "*",
 		element: <Navigate to='/' />,
 	},
